@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000011 /* RGPCore in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000021 /* RGPCore */; };
+		A10000000000000000000012 /* RGPMock in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000022 /* RGPMock */; };
+		A10000000000000000000013 /* RGPPS5 in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000023 /* RGPPS5 */; };
+		A10000000000000000000042 /* RGPChiaki in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000041 /* RGPChiaki */; };
+		A10000000000000000000051 /* RGPMirror in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000050 /* RGPMirror */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000001 /* RemoteGaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteGamingPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A10000000000000000000002 /* RemoteGaming */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ../../App/RemoteGaming;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000051 /* RGPMirror in Frameworks */,
+				A10000000000000000000042 /* RGPChiaki in Frameworks */,
+				A10000000000000000000011 /* RGPCore in Frameworks */,
+				A10000000000000000000012 /* RGPMock in Frameworks */,
+				A10000000000000000000013 /* RGPPS5 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000004 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000002 /* RemoteGaming */,
+				A10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000001 /* RemoteGaming.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000006 /* RemoteGaming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000033 /* Build configuration list for PBXNativeTarget "RemoteGaming" */;
+			buildPhases = (
+				A10000000000000000000007 /* Sources */,
+				A10000000000000000000003 /* Frameworks */,
+				A10000000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A10000000000000000000002 /* RemoteGaming */,
+			);
+			name = RemoteGaming;
+			packageProductDependencies = (
+				A10000000000000000000050 /* RGPMirror */,
+				A10000000000000000000041 /* RGPChiaki */,
+				A10000000000000000000021 /* RGPCore */,
+				A10000000000000000000022 /* RGPMock */,
+				A10000000000000000000023 /* RGPPS5 */,
+			);
+			productName = RemoteGaming;
+			productReference = A10000000000000000000001 /* RemoteGaming.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					A10000000000000000000006 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000030 /* Build configuration list for PBXProject "RemoteGaming" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000004;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A10000000000000000000040 /* XCLocalSwiftPackageReference "RGPChiaki" */,
+				A10000000000000000000020 /* XCLocalSwiftPackageReference "../../Packages/RGPCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000006 /* RemoteGaming */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000007 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10000000000000000000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10000000000000000000034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "../../App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CoastPlay PRO";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Used to find and connect to your game console on this network.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.placeholder.remotegaming.prototype;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) PROTOTYPE_CHIAKI";
+				PRODUCT_NAME = RemoteGamingPrototype;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "../../App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "CoastPlay PRO";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Used to find and connect to your game console on this network.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.placeholder.remotegaming.prototype;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) PROTOTYPE_CHIAKI";
+				PRODUCT_NAME = RemoteGamingPrototype;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000030 /* Build configuration list for PBXProject "RemoteGaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000031 /* Debug */,
+				A10000000000000000000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000033 /* Build configuration list for PBXNativeTarget "RemoteGaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000034 /* Debug */,
+				A10000000000000000000035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A10000000000000000000020 /* XCLocalSwiftPackageReference "../../Packages/RGPCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Packages/RGPCore;
+		};
+		A10000000000000000000040 /* XCLocalSwiftPackageReference "RGPChiaki" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RGPChiaki;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000000000000000000021 /* RGPCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RGPCore;
+		};
+		A10000000000000000000022 /* RGPMock */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RGPMock;
+		};
+		A10000000000000000000023 /* RGPPS5 */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RGPPS5;
+		};
+		A10000000000000000000041 /* RGPChiaki */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RGPChiaki;
+		};
+		A10000000000000000000050 /* RGPMirror */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RGPMirror;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A10000000000000000000009 /* Project object */;
+}

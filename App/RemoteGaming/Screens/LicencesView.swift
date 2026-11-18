@@ -4,7 +4,7 @@ import SwiftUI
 /// requires that everyone who receives the app can get the complete source. Leave nil until
 /// the public address exists; the screen then says plainly that it is not yet published.
 enum SourceInfo {
-    static let sourceURL: URL? = nil
+    static let sourceURL: URL? = URL(string: "https://github.com/lnsjenkins4-labs/coastplay-pro")
 }
 
 /// "Licences and source code": what open-source software is inside the app, the full licence

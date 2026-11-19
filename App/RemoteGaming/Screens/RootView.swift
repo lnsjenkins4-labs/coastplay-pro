@@ -698,6 +698,16 @@ struct ConnectionLogView: View {
 
 struct SettingsTab: View {
     @EnvironmentObject var model: AppModel
+
+    /// The store build shows plans and the refund policy only once purchases are switched on
+    /// (they are not in version 1.0); other builds always show them.
+    private var showPlansEntry: Bool {
+        #if STORE_BUILD
+        return model.billingEnforced
+        #else
+        return true
+        #endif
+    }
     @State private var confirmRemoveAll = false
     @AppStorage("showDiagnostics") private var showDiagnostics = false
     @AppStorage("awayQuality") private var awayQuality = "fast"
@@ -733,6 +743,7 @@ struct SettingsTab: View {
                         }
                     }
                 }
+                if showPlansEntry {
                 Card {
                     Text("PLAN").font(.caption.weight(.bold)).foregroundStyle(.secondary)
                     NavigationLink { PlansView(store: model.store) } label: {
@@ -743,6 +754,7 @@ struct SettingsTab: View {
                         }
                     }
                     .accessibilityIdentifier("plansLink")
+                }
                 }
                 Card {
                     Text("CREATOR").font(.caption.weight(.bold)).foregroundStyle(.secondary)
@@ -852,8 +864,10 @@ struct SettingsTab: View {
                 }
                 Card {
                     Text("ABOUT").font(.caption.weight(.bold)).foregroundStyle(.secondary)
-                    NavigationLink { PolicyView() } label: { Label("Our promise & refund policy", systemImage: "hand.raised") }
-                        .font(.subheadline)
+                    if showPlansEntry {
+                        NavigationLink { PolicyView() } label: { Label("Our promise & refund policy", systemImage: "hand.raised") }
+                            .font(.subheadline)
+                    }
                     NavigationLink { LicencesView() } label: { Label("Licences and source code", systemImage: "doc.text") }
                         .font(.subheadline)
                         .accessibilityIdentifier("licencesLink")

@@ -33,10 +33,10 @@ struct PolicyView: View {
                 }
                 Card {
                     Text("REFUNDS").font(.caption.weight(.bold)).foregroundStyle(.secondary)
-                    point("When a refund applies", "If you met everything in the list above and the app still would not work for you, you can ask for a refund.")
-                    point("What we'll ask for", "Enough to confirm your setup: that the console and network were set up as described, that nothing such as a VPN was blocking the connection, and a support report from the app (Help → Create a support report) showing what happened.")
-                    point("How long it takes", "We review each request within 5 to 7 business days. If it's approved, the refund is sent within a further 5 to 7 business days.")
-                    point("When a refund doesn't apply", "When the requirements above weren't met — for example no access to the router for mobile-data play, a VPN blocking the connection, or a console that isn't set up for Remote Play.")
+                    point("Purchases go through Apple", "Plans are bought with your Apple Account, so Apple handles every refund. We cannot issue one ourselves.")
+                    point("How to ask", "Go to reportaproblem.apple.com, sign in, choose the CoastPlay PRO purchase and pick Request a refund. Apple decides each request.")
+                    point("If it would not work for you", "Tell us first (Help → Create a support report) and we will try to fix it. If you met everything in the list above and it still would not work, say so in your refund request.")
+                    point("Cancelling", "You can cancel any time in your Apple Account's subscriptions. Access continues until the end of the period you paid for.")
                     Text("Nothing here takes away rights you have under the law where you live.")
                         .font(.footnote).foregroundStyle(.secondary)
                 }

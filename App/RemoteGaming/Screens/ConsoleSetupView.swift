@@ -25,9 +25,9 @@ struct ConsoleSetupView: View {
         ScrollView {
             VStack(spacing: 14) {
                 if model.demoMode { DemoBanner() }
-                if !model.demoMode, model.showExperimentalDevices {
+                if !model.demoMode, model.showKindPicker {
                     Picker("Device type", selection: $model.setupKind) {
-                        ForEach(ConsoleKind.allCases) { Text($0.displayName).tag($0) }
+                        ForEach(model.setupKinds) { Text($0.displayName).tag($0) }
                     }
                     .pickerStyle(.segmented)
                     .onChange(of: model.setupKind) { _, _ in

@@ -9,7 +9,7 @@ public final class MirrorConsoleSource: ConsoleSource {
     public init() {}
 
     public var setupSteps: [String] {
-        ["On the computer, open the CoastPlay Host app. Its window has a short setup list: follow steps 1 and 2 there.",
+        ["On the computer, download the free CoastPlay Host app from lnsjenkins4-labs.github.io/coastplay-pro and open it. Its window has a short setup list: follow steps 1 and 2 there.",
          "Put this device on the same Wi-Fi as the computer.",
          "Type the 8-digit code from step 3 of that window here.",
          "To have it ready whenever you want it, switch on both options under step 4 on the computer.",

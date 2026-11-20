@@ -52,7 +52,14 @@ final class AppModel: ObservableObject {
     /// and have been tested in the sandbox, so a working phone is never locked out by accident.
     let store = StoreManager()
     @Published var showPlans = false
-    var billingEnforced: Bool { UserDefaults.standard.bool(forKey: "billingEnforced") }
+    /// Version 1.1 store build: purchases are on. Other builds keep the old test switch.
+    var billingEnforced: Bool {
+        #if STORE_BUILD
+        return true
+        #else
+        return UserDefaults.standard.bool(forKey: "billingEnforced")
+        #endif
+    }
 
     /// On-screen controls changed. Sends at once; the first real press also counts as "input sent".
     func touchInput(_ state: ControllerState) {
@@ -79,6 +86,22 @@ final class AppModel: ObservableObject {
             UserDefaults.standard.set(showExperimentalDevices, forKey: "showExperimentalDevices")
             if !showExperimentalDevices { setupKind = .ps5 }
         }
+    }
+    /// Device types Console Setup offers. The store build offers PlayStation 5 and Computer
+    /// (a Mac running CoastPlay Host); Xbox is a placeholder and stays hidden there.
+    var setupKinds: [ConsoleKind] {
+        #if STORE_BUILD
+        return [.ps5, .computer]
+        #else
+        return showExperimentalDevices ? ConsoleKind.allCases : [.ps5]
+        #endif
+    }
+    var showKindPicker: Bool {
+        #if STORE_BUILD
+        return true
+        #else
+        return showExperimentalDevices
+        #endif
     }
     /// What has actually been observed per saved console (never recorded for demo sessions).
     @Published private(set) var readiness: [String: ReadinessRecord] = [:]

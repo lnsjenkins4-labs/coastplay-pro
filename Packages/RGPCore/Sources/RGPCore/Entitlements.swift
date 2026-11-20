@@ -34,8 +34,9 @@ public enum SourcePlatform: String, Codable, CaseIterable, Sendable, Identifiabl
 public struct PlatformAvailability: Sendable, Equatable {
     public var available: [SourcePlatform]
     public init(available: [SourcePlatform]) { self.available = available }
-    /// 2026-11-17: PS5 is the only source confirmed working on real hardware.
-    public static let current = PlatformAvailability(available: [.ps5])
+    /// PS5 (confirmed on real hardware 2026-11-17) and a Mac running the CoastPlay Host app
+    /// (confirmed on Wi-Fi and 5G, 2026-11). Xbox stays out until it exists and is tested.
+    public static let current = PlatformAvailability(available: [.ps5, .pc])
     public func isAvailable(_ platform: SourcePlatform) -> Bool { available.contains(platform) }
 }
 

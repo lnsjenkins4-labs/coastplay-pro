@@ -68,8 +68,8 @@ final class EntitlementRuleTests: XCTestCase {
 
     func testUnsupportedPlatformIsNeverSoldAsAvailable() {
         XCTAssertEqual(EntitlementRules.access(to: .xbox, entitlement: active(PlanCatalog.allAnnual), selectedPlatform: nil, availability: ps5AndPC, now: now), .notAvailableYet)
-        XCTAssertFalse(PlatformAvailability.current.isAvailable(.pc), "PC must not be listed until it is verified on real hardware")
-        XCTAssertEqual(PlatformAvailability.current.available, [.ps5])
+        XCTAssertFalse(PlatformAvailability.current.isAvailable(.xbox), "Xbox must not be listed until it exists and is verified")
+        XCTAssertEqual(PlatformAvailability.current.available, [.ps5, .pc])
     }
 
     func testCancelledKeepsAccessUntilThePaidPeriodEnds() {

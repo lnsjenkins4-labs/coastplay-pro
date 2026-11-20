@@ -902,7 +902,7 @@ struct SettingsTab: View {
 struct WhatMustBeOnCard: View {
     @EnvironmentObject private var model: AppModel
 
-    private var showComputer: Bool { model.showExperimentalDevices || model.consoles.contains { $0.kind == .computer } }
+    private var showComputer: Bool { model.showKindPicker || model.consoles.contains { $0.kind == .computer } }
 
     var body: some View {
         Card {

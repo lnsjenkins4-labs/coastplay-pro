@@ -110,8 +110,8 @@ final class EntitlementRuleTests: XCTestCase {
     }
 
     func testPlanSummariesOnlyNameAvailablePlatforms() {
-        XCTAssertFalse(EntitlementRules.accessSummary(tier: .allAccess, availability: ps5Only).contains("PC"))
-        XCTAssertTrue(EntitlementRules.accessSummary(tier: .allAccess, availability: ps5AndPC).contains("PC"))
+        XCTAssertFalse(EntitlementRules.accessSummary(tier: .allAccess, availability: ps5Only).contains("Computer"))
+        XCTAssertTrue(EntitlementRules.accessSummary(tier: .allAccess, availability: ps5AndPC).contains("Computer"))
         XCTAssertTrue(EntitlementRules.accessSummary(tier: .single, availability: ps5Only).contains("PlayStation 5"))
     }
 }

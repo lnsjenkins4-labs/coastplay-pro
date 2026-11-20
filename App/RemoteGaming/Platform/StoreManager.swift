@@ -131,4 +131,13 @@ final class StoreManager: ObservableObject {
     /// Price as the store reports it for this person's country; the owner's US price until then.
     func priceText(_ plan: PlanProduct) -> String { products[plan.id]?.displayPrice ?? plan.referencePriceText }
     var pricesAreFromStore: Bool { loadState == .loaded }
+    /// True when the store has no product for this plan. Debug builds started with
+    /// `-plansPreview` treat every plan as loaded, only to take layout screenshots in the
+    /// simulator (which has no App Store). Never compiled into a release build.
+    func isMissing(_ plan: PlanProduct) -> Bool {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-plansPreview") { return false }
+        #endif
+        return products[plan.id] == nil
+    }
 }

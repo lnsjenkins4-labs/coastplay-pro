@@ -16,7 +16,7 @@ public enum SourcePlatform: String, Codable, CaseIterable, Sendable, Identifiabl
     public var displayName: String {
         switch self {
         case .ps5: return "PlayStation 5"
-        case .pc: return "PC"
+        case .pc: return "Computer"
         case .xbox: return "Xbox"
         }
     }

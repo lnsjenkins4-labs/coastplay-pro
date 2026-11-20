@@ -132,9 +132,9 @@ struct PlansView: View {
                 Text(buttonTitle(change)).frame(maxWidth: .infinity).padding(.vertical, 4)
             }
             .buttonStyle(.borderedProminent)
-            .disabled(store.busy || change == PlanChange.none || store.products[plan.id] == nil)
+            .disabled(store.busy || change == PlanChange.none || store.isMissing(plan))
             .accessibilityIdentifier("buy-\(plan.id)")
-            if store.products[plan.id] == nil {
+            if store.isMissing(plan) {
                 Text(store.loadState == .loading ? "Loading from the App Store…" : "Not available to buy yet.")
                     .font(.caption).foregroundStyle(.secondary)
             } else if change == .downgrade {
